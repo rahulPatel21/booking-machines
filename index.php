@@ -7,15 +7,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <title>GameGuidez</title>
+  <title>Book that machine!</title>
 </head>
 <body class="grey lighten-3">
 
   <!-- NAVBAR -->
   <nav class="z-depth-0 grey lighten-4">    
     <div class="nav-wrapper container">
-      <a href="#" class="brand-logo">
-        <img src="img/logo.svg" style="width: 180px; margin-top: 10px;">
+        
+      <a href="#" class="brand-logo" style="text-decoration: none; color: #000000;">
+        Book That!<!--<img src="img/logo.svg" style="width: 180px; margin-top: 10px;"> -->
       </a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li class="logged-in" style="display: none;">
