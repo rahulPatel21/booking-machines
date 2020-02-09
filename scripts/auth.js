@@ -43,6 +43,7 @@ createform.addEventListener('submit', (e) => {
     db.collection('requests').add({
         roll : createform['roll'].value,
         contact: createform['contact'].value,
+        // userid : auth.user.email,
 
         Sdate : createform['stseldd'].value,
         SMonth: createform['stselmm'].value,
@@ -66,6 +67,17 @@ createform.addEventListener('submit', (e) => {
         console.log(err.message);
     });
 });
+
+
+// //Show approved requests 
+// // logout
+// const approved = document.querySelector('#appr-req');
+// approved.addEventListener('click', (e) => {
+//     // e.preventDefault();
+//     setupGuides
+// });
+
+
 
 // approving button use
 // const approvebutt = document.querySelector(doc)

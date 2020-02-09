@@ -14,7 +14,7 @@ const setupmenu = (user) => {
     db.collection('users').doc(user.uid).get().then(doc => {
       const html = `
       <div>Logged in as ${user.email}</div>
-      <div class = "pink-text">${user.admin ? 'Admin' :''}</div>
+      <div class = "pink-text">${user.admin ? 'Admin' :'Not an Admin'}</div>
       `
       accountdetails.innerHTML = html;
     });
@@ -38,13 +38,13 @@ const setupGuides = (data,user) => {
     let html = '';
     data.forEach(doc =>{
     const guide = doc.data();
-    console.log(guide);
+    // console.log(guide);
     if(user.admin){
       const li =`
       <li>
         <div class="collapsible-header grey lighten-4">${guide.roll} has booked the laser cutter from ${guide.Sdate}/${guide.SMonth}/${guide.SYear}. ${guide.status}</div>
-        <div class="collapsible-header">${user.admin ? `
-        <button id="${doc.id}" class="btn yellow darken-2 z-depth-0" name="approve" onclick="hi('${doc.id}')">>Approve</button>
+        <div class="collapsible-body white">${user.admin ? `
+        <button id="${doc.id}" class="btn yellow darken-2 z-depth-0" name="approve" onclick="hi('${doc.id}')">Approve</button>
         `:'Your are not admin.'}</div>
       </li>
       `;
@@ -53,7 +53,9 @@ const setupGuides = (data,user) => {
     }else{
       const li =`
       <li>
-        <div class="collapsible-header grey lighten-4">${guide.roll} has booked the laser cutter from ${guide.Sdate}/${guide.SMonth}/${guide.SYear}. ${guide.status}</div>
+        <div class="collapsible-header grey lighten-4">${guide.roll} has booked the laser cutter from ${guide.Sdate}/${guide.SMonth}/${guide.SYear}. Status: ${guide.status} </div>
+        <div class="collapsible-body white"></div>
+
       </li>
       `;
       html+=li;

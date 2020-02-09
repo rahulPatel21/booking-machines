@@ -24,6 +24,12 @@
           <li class="logged-in" style="display: none;">
             <a href="#" class="grey-text" id="logout">Logout</a>
           </li>
+          <li class="admin" style="display: none;">
+            <a href="#" class="grey-text" id="pend-req">Pending Requests</a>
+          </li>
+          <li class="admin" style="display: none;">
+            <a href="#" class="grey-text" id="appr-req">Approved Requests</a>
+          </li>
           <li class="logged-in" style="display: block;">
             <a href="#" class="grey-text modal-trigger" data-target="modal-create">Create Booking</a>
           </li>
@@ -208,12 +214,12 @@
   </div>
 
   <!-- ADMIN ACTIONS -->
-  <form class="center-align admin-actions admin" style="margin: 40px auto; max-width: 300px; display:block;">
+  <form class="center-align admin-actions admin" style="margin: 40px auto; max-width: 300px; display:none;">
   <input type="email" placeholder="User email" id="admin-email" required />
   <button class="btn-small yellow darken-2 z-depth-0">Make admin</button>
   </form>
 
-
+  <div class="container"><center><h1>All Bookings</h1></center></div>
   <!-- GUIDE LIST -->
   <div class="container" style="margin-top: 40px;">
     <ul class="collapsible z-depth-0 guides" style="border: none;">
